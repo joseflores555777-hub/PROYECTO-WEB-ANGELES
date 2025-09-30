@@ -706,14 +706,14 @@ button {
   }
 }
 
-
-/* ✅✅✅ AQUÍ VA EL FIX - JUSTO DESPUÉS ✅✅✅ */
-/* FIX PARA MÓVIL - Mostrar siempre el texto */
+/* FIX PARA MÓVIL - Posicionamiento correcto */
 @media (max-width: 750px) {
   .error__content {
-    padding-top: 180px !important;
+    padding-top: 120px !important; /* Reducido de 180px a 120px */
     position: relative !important;
     transform: none !important;
+    top: 0 !important;
+    left: 0 !important;
   }
   
   .message__title, 
@@ -721,5 +721,44 @@ button {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+  }
+  
+  .error {
+    padding-top: 0 !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lamp {
+    zoom: 0.4; /* Hacer la lámpara más pequeña en móvil */
+    top: 50px; /* Subir la lámpara */
+  }
+  
+  .light {
+    border-bottom: 700px solid rgb(44 255 255 / 24%); /* Reducir el alcance de la luz */
+  }
+}
+
+/* FIX EXTRA para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .error__content {
+    padding-top: 100px !important; /* Aún más arriba */
+  }
+  
+  .message__title {
+    font-size: 24px !important; /* Texto más pequeño */
+    padding: 0 20px 20px 20px;
+  }
+  
+  .message__text {
+    font-size: 14px !important;
+    padding: 0 15px;
+  }
+  
+  .lamp {
+    zoom: 0.3; /* Lámpara aún más pequeña */
+    top: 30px;
   }
 }
