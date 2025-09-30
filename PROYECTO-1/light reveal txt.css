@@ -707,3 +707,19 @@ button {
 }
 
 
+/* ✅✅✅ AQUÍ VA EL FIX - JUSTO DESPUÉS ✅✅✅ */
+/* FIX PARA MÓVIL - Mostrar siempre el texto */
+@media (max-width: 750px) {
+  .error__content {
+    padding-top: 180px !important;
+    position: relative !important;
+    transform: none !important;
+  }
+  
+  .message__title, 
+  .message__text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
